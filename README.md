@@ -22,4 +22,4 @@ learning everything you need to know during lectures and labs.
 * If you need to, you may add additional directories, README.md files, and other files.
 
 
-***Possible data:*** [Covid to air traffic](https://www.kaggle.com/terenceshin/covid19s-impact-on-airport-traffic)
+Test: [(Barnes, 2020)](https://www.ustravel.org/news/harvard-study-low-risk-covid-19-transmission-when-flying)
