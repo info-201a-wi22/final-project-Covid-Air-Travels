@@ -1,5 +1,4 @@
 # The Coronavirus’s Effect on Air Travels and the Implications
-### # Covid Air-Travels
 
 <p align="center">
 INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
@@ -10,7 +9,7 @@ By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), Garima Thapa (gt35@uw.edu
 Keywords: #Covid #Airlines #Health #Traveling
 
 ## Abstract
-Our main question is how covid has affected air travel and how this impacts the lives of the people that travel. This question is important because covid has caused many losses for airlines with many people opting for other options to connect with others. To help answer this question, we will find details on the changes in passengers that the airlines receive. 
+Our main question is how covid has affected air travel and how this impacts the lives of the people that travel. This question is important because covid has caused many losses for airlines with many people opting for other options to connect with others. To help answer this question, we will find details on the changes in passengers that the airlines receive.
 
 ## 1. Introduction
 The coronavirus that has rapidly spread since early 2020 caused many to be apprehensive towards crowds of people. Airplanes are examples of this, being an enclosed space that seats many people for an average of 3 hours. Due to such concerns, airlines have been seeing a decline in business since March of 2020, with many countries adding travel bans and restrictions. With the introduction of vaccines and safety practices, many are starting to travel by air again. An initial study conducted by the Harvard T.H. Chan School of Public Health concluded that “there is a low risk of COVID-19 transmission on aircraft” [(Barnes, 2020)](https://www.ustravel.org/news/harvard-study-low-risk-covid-19-transmission-when-flying)[^2] as of October 2020. However, with the new covid Omicron variant, the recovery of airline businesses may continue to see limited passengers. There are articles where an airline medical advisor predicted that Omicron will make it “twice or even three times more likely to catch Covid-19 during a flight” [(Whitley, 2021)](https://www.bloomberg.com/news/articles/2021-12-22/omicron-at-least-doubles-risk-of-getting-infected-on-a-plane)[^11].
