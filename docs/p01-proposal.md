@@ -4,7 +4,7 @@
 INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
 WINTER 2022<br/>
 
-By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), Garima Thapa (gt35@uw.edu), Linda Giang (linda71@uw.edu)
+By: [Monica Dao](xmtdx@uw.edu), [John Oh](jho12@uw.edu), [Garima Thapa](gt35@uw.edu), [Linda Giang](linda71@uw.edu)
 
 Keywords: #Covid #Airlines #Health #Traveling
 
