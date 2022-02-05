@@ -10,11 +10,7 @@ By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), Garima Thapa (gt35@uw.edu
 Keywords: #Covid #Airlines #Health #Traveling
 
 ## Abstract
-Our main question is how covid has affected air travel and this impacts the lives of the people that travel. This question is important because covid has pretty much become a part of daily life. Many businesses, especially airlines have suffered losses with the arrival of covid with many people opting for other options to connect with others. To help answer this question, we will find details on the changes in passengers that the airlines receive.
-
-We are concerned with how covid has affected air travel because many people at the University of Washington come from many places around the world. But with covid, traveling long distances will put people at risk to themselves and the people they will be visiting. So would air travel regain its former popularity even with covid around? To address this we will be analyzing the airport traffic, the places that people travel to, and the dates of these trips to compare the changes and trends of how the planes are used.
-
-Consider that the data we get is limited to what is provided by the airlines. This is important as different airlines may collect data differently meaning that the analysis might be slightly inaccurate. Accordingly, we plan to give a range on the changes to account for the slight differences.
+Our main question is how covid has affected air travel and how this impacts the lives of the people that travel. This question is important because covid has caused many losses for airlines with many people opting for other options to connect with others. To help answer this question, we will find details on the changes in passengers that the airlines receive. 
 
 ## 1. Introduction
 The coronavirus that has rapidly spread since early 2020 caused many to be apprehensive towards crowds of people. Airplanes are examples of this, being an enclosed space that seats many people for an average of 3 hours. Due to such concerns, airlines have been seeing a decline in business since March of 2020, with many countries adding travel bans and restrictions. With the introduction of vaccines and safety practices, many are starting to travel by air again. An initial study conducted by the Harvard T.H. Chan School of Public Health concluded that “there is a low risk of COVID-19 transmission on aircraft” [(Barnes, 2020)](https://www.ustravel.org/news/harvard-study-low-risk-covid-19-transmission-when-flying)[^2] as of October 2020. However, with the new covid Omicron variant, the recovery of airline businesses may continue to see limited passengers. There are articles where an airline medical advisor predicted that Omicron will make it “twice or even three times more likely to catch Covid-19 during a flight” [(Whitley, 2021)](https://www.bloomberg.com/news/articles/2021-12-22/omicron-at-least-doubles-risk-of-getting-infected-on-a-plane)[^11].
@@ -42,11 +38,6 @@ A benefit of having Covid-19 and Airtravel history data is its sensitivity to tr
 
 Many adjustments had to be made in the daily lives of people including how they interact with people who live far away with them. With airplanes being an enclosed space and passengers seated in close proximity, the risks of covid is increased. Therefore these questions seek to find out how people have been using the various airlines while lessening their risk of covid. We would like to find out whether the airline businesses will stay limited or if people have decided that it’s safer to travel now that vaccines, masks, and disinfections have become more common. The changes in usage of these various airlines can also seek to optimize the usage of planes and decrease the greenhouse gas produced. In 2019, it was seen that 29% of carbon pollution came from the transportation sector [(Sources of Greenhouse Gas Emissions, 2021)](https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions#transportation)[^7].
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e84263667c58fb9c1f55e928ef6be2e52585af7f
 ## 4. The Dataset
 
 The dataset is U.S. International Air Traffic data(1990-2020) from Kaggle[^6] on airport and airline traffic by US and international carriers. The data, held in the U.S. Department of Transportation[^3] website, is from the [U.S. International Air Passenger and Freight Statistics Report](https://www.transportation.gov/policy/aviation-policy/us-international-air-passenger-and-freight-statistics-report)[^9] page. This particular dataset is on passengers and holds information on the number of passengers each month and year between two airports serviced by a specific airline. This report is part of the T-100 program and it was developed to allow the public to have access to data on flights internationally. The dataset reports are updated quarterly, and the site has multiple datasets around Passenger, Freight, Departures, Seats. The effect of the pandemic on traffic can be analyzed in the 2020 report.
@@ -66,7 +57,10 @@ A possible implication for policymakers would be the level of enforcement or lif
 The database we will be using, Covid-19 Daily Data Updated [(Affan, n.d.)](https://www.kaggle.com/affanazhar/covid19-daily-data-updated/version/6?select=Covid_19_data_version_6.csv)[^1], has updates up to January 30, 2022. Although this information is recent, the latest data records numbers at the peak of reported Covid-19 cases, which may not be an accurate representation of the present-day situation. The statistics provided by the New York Times show that the seven-day average of covid cases reported on January 30, 2022, is 522,965 cases whereas, on February 3, 2022, it is 356,849 cases [(Washington Coronavirus Map and Case Count, 2022)](https://www.nytimes.com/interactive/2021/us/washington-covid-cases.html)[^10]. Because the numbers are changing drastically as each day passes, our data and research may not be as predictive of the future as we hope. In addition to that, the dataset may not be as accurate since we only have the number of Covid cases reported and not the true number of Covid cases throughout the United States.
 
 ## Acknowledgement
-Thanks to the people who took the time to collect the data that allowed us to do an insightful research for our project. Also thanks to T.A. Samuel for giving us clear instructions and guidance that helped us initiate the proejct.
+Thanks to the people who took the time to collect the data that allowed us to do an insightful research for our project. Also thanks to T.A. Samuel for giving us clear instructions and guidance that helped us initiate the project.
+
+### Appendix A: Questions
+Up to how many datasets would you recommend us to utilize? How many are too little and how many are too much?
 
 ## Reference
 [^1]: Affan, M. (2022, January 30). _covid-19 Daily data Updated._ https://www.kaggle.com/affanazhar/covid19-daily-data-updated/version/6?select=Covid_19_data_version_6.csv
@@ -90,6 +84,3 @@ Thanks to the people who took the time to collect the data that allowed us to do
 [^10]: _Washington Coronavirus Map and Case Count._ (2022, February). The New York Times. Retrieved February 4, 2022, from https://www.nytimes.com/interactive/2021/us/washington-covid-cases.html
 
 [^11]: Whitley, A. (2021, December 22). _Is It Safe to Fly Right Now? Omicron May Double Infection Risk on Planes: IATA._ Bloomberg.com. Retrieved February 4, 2022, from https://www.bloomberg.com/news/articles/2021-12-22/omicron-at-least-doubles-risk-of-getting-infected-on-a-plane
-
-## Appendix A: Questions
-Up to how many datasets would you recommend us to utilize? How many are too little and how many are too much?
