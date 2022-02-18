@@ -22,8 +22,9 @@ popular_airline <- passengers_report %>%
   
 View(popular_airline) #'AA' = Alaska Airlines
 
-# 2. How much percent of the total number of passengers decline when covid hit (2019 - 2020)?
-# (data from 2020 only goes from jan-march, so only those months counted)
+# 2. What was the difference in percentage between the total number of 
+# passengers in the years before and after COVID hit (2019-2020)?
+# (data from 2020 only goes from jan-march, so only those months are counted)
 passengers_report$data_dte <-as.Date(passengers_report$data_dte,"%m/%d/%Y")
 passengers_19 <- passengers_report %>%
   filter(data_dte >= "2019-1-1" & data_dte <= "2019-3-1") %>%
@@ -37,8 +38,8 @@ passengers_20 <- passengers_report %>%
 
 percent_diff <- (passengers_20 - passengers_19) / passengers_19 * 100 # 21.43% 
 
-# 3. What year had the most passengers?
-# (excludes 2020 b/c of covid and we know there's been a decline)
+# 3. Which year had the most passengers?
+# (excludes 2020 b/c of COVID and we know there's been a decline)
 most_passengers_year <- passengers_report %>%
   filter(data_dte < "2020-1-1") %>%
   group_by(Year) %>%
