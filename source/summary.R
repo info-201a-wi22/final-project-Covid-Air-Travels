@@ -2,7 +2,13 @@
 install.packages("dplyr")
 library(dplyr)
 
-passengers_report <- read.csv("~/INFO201/final-project-Covid-Air-Travels/data/International_Report_Passengers.csv")
+setwd("~/Documents/INFO_201/final-project-Covid_Airtravel-/source")
+
+passengers_report <- read.csv(
+  "../Data/International_Report_Passengers.csv",
+  header = TRUE,
+  stringsAsFactors = FALSE
+)
 View(passengers_report)
 
 
@@ -29,7 +35,7 @@ passengers_20 <- passengers_report %>%
   summarise(num = sum(Total)) %>%
   pull(num)
 
-percent_diff <- (passengers_20 - passengers_19) / passengers_19 * 100
+percent_diff <- (passengers_20 - passengers_19) / passengers_19 * 100 # 21.43% 
 
 # 3. What year had the most passengers?
 # (excludes 2020 b/c of covid and we know there's been a decline)
@@ -41,9 +47,15 @@ most_passengers_year <- passengers_report %>%
   filter(row_number() == 1) %>%
   pull(Year)
   
-View(most_passengers_year)
+View(most_passengers_year) # 2019 
 
-# 4.
-
+# 4. Which months out of all the years had the most passengers?
+least_passengers_month <- passengers_report %>%
+  mutate(data_dte = as.Date(passengers_report$data_dte, "%m/%d/%Y")) %>%  
+  group_by(data_dte) %>% 
+  filter(Total == max(passengers_report$Total, na.rm = TRUE)) %>% 
+  pull(data_dte)
+  
+View(least_passengers_month) # 1990-03
 
 # 5.
