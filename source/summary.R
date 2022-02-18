@@ -59,4 +59,21 @@ least_passengers_month <- passengers_report %>%
   
 View(least_passengers_month) # 1990-03
 
-# 5.
+# 5.Which month had the lowest average number of passengers?
+lowest_avg_passenger <- passengers_report %>%
+  mutate(data_dte = as.Date(passengers_report$data_dte, "%m/%d/%Y")) %>%  
+  group_by(data_dte) %>%
+  summarize(avg_passengers = mean(Total, na.rm = TRUE)) 
+  
+lowest_avg_passenger <- filter(lowest_avg_passenger, avg_passengers == min(avg_passengers)) %>%
+  pull(data_dte) # 1991-02-01
+  
+View(lowest_avg_passenger)
+  
+
+
+
+
+
+
+
