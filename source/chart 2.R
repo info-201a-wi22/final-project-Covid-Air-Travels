@@ -23,6 +23,8 @@ random_sample <- three_months %>%
   summarise(Total = mean(Total))
 
 chart2 <- ggplot(data = random_sample) +
-  geom_boxplot(mapping = aes(
-    x = log(Total), y = carrier, color = carrier), alpha = 0.5)
-
+  geom_boxplot(mapping = aes(x = log(Total), y = carrier, 
+                             color = carrier), alpha = 0.5) +
+  ggtitle("Passengers by Carriers") +
+  xlab("Total Passengers (log scale)") + 
+  ylab("Carriers")
