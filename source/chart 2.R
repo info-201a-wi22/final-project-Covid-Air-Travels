@@ -15,7 +15,7 @@ three_months <- airlines %>%
 
 unique_carrier <- unique(three_months$carrier)
 
-random_carrier_sample <- sample(unique_carrier, 15)
+random_carrier_sample <- sample(unique_carrier, 10)
 
 random_sample <- three_months %>%
   filter(carrier %in% random_carrier_sample) %>%
