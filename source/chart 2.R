@@ -22,7 +22,7 @@ random_sample <- three_months %>%
   group_by(Year, carrier) %>%
   summarise(Total = mean(Total))
 
-ggplot(data = random_sample) +
+chart2 <- ggplot(data = random_sample) +
   geom_boxplot(mapping = aes(
     x = log(Total), y = carrier, color = carrier), alpha = 0.5)
 
