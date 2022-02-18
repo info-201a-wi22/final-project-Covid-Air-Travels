@@ -19,8 +19,10 @@ random_carrier_sample <- sample(unique_carrier, 15)
 
 random_sample <- three_months %>%
   filter(carrier %in% random_carrier_sample) %>%
-  group_by(carrier) 
+  group_by(Year, carrier) %>%
+  summarise(Total = mean(Total))
 
 ggplot(data = random_sample) +
-  geom_point(mapping = aes(
-    x = Year, y = Total, color = carrier), alpha = 0.1)
+  geom_boxplot(mapping = aes(
+    x = log(Total), y = carrier, color = carrier), alpha = 0.5)
+
