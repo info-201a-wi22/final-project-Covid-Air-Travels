@@ -1,7 +1,6 @@
 # A file that calculates summary information to be included in your report
-install.packages("dplyr")
 library(dplyr)
-
+                 
 setwd("~/Documents/INFO_201/final-project-Covid_Airtravel-/source")
 
 passengers_report <- read.csv(
