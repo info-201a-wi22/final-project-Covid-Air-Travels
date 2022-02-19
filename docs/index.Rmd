@@ -117,9 +117,9 @@ This chart shows the changes in the total passengers by each carrier, each of th
 source("../source/chart3.R")
 
 ```
+<br>
 
-
-Chart 3 shows the average number of passengers by year throughout the years (1990-2020). The histogram was made to help show the frequency in air travel by the year with the past decade and provide insight into relationships between major events and frequency of air travel. The visualizations in bars (the height) shows a drastic decrease in number of passengers in 2020 when the years before show an overall increasing trend. This reveals that there may have been a major event to have caused an abrupt drop in the average number of airline passengers.
+Chart 3 shows the average number of passengers by year throughout the years (1990-2020). The histogram was made to help show the frequency in air travel by the year with the past decade and provide insight into relationships between major events and frequency of air travel. The visualizations in bars (the height) shows **a drastic decrease in number of passengers in 2020 when the years before show an overall increasing trend**. This reveals that there may have been a major event to have caused an abrupt drop in the average number of airline passengers.
 
 
 ### References
