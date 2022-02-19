@@ -1,13 +1,8 @@
 library(ggplot2)
 library(tidyverse)
 
-setwd("~/Documents/final-project-Covid-Air-Travels/source")
+passengers_report <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv")
 
-airlines <- read.csv(
-  file = "../data/International_Report_Passengers.csv", 
-  header = TRUE, 
-  stringsAsFactors = FALSE
-)
 
 three_months <- airlines %>%
   select(Year, Month, Total, carrier) %>%

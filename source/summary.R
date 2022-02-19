@@ -1,14 +1,7 @@
 # A file that calculates summary information to be included in your report
 library(dplyr)
                  
-setwd("~/Documents/INFO_201/final-project-Covid_Airtravel-/source")
-
-passengers_report <- read.csv(
-  "../Data/International_Report_Passengers.csv",
-  header = TRUE,
-  stringsAsFactors = FALSE
-)
-View(passengers_report)
+passengers_report <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv")
 
 
 # 1. What was the most popular airline?
@@ -19,7 +12,7 @@ popular_airline <- passengers_report %>%
   filter(row_number() == 1) %>%
   pull(carrier)
   
-View(popular_airline) #'AA' = Alaska Airlines
+  #'AA' = Alaska Airlines
 
 # 2. What was the difference in percentage between the total number of 
 # passengers in the years before and after COVID hit (2019-2020)?
@@ -35,7 +28,9 @@ passengers_20 <- passengers_report %>%
   summarise(num = sum(Total)) %>%
   pull(num)
 
-percent_diff <- (passengers_20 - passengers_19) / passengers_19 * 100 # 21.43% 
+percent_diff <- (passengers_20 - passengers_19) / passengers_19 * 100 
+  
+  # 21.43% 
 
 # 3. Which year had the most passengers?
 # (excludes 2020 b/c of COVID and we know there's been a decline)
@@ -47,7 +42,7 @@ most_passengers_year <- passengers_report %>%
   filter(row_number() == 1) %>%
   pull(Year)
   
-View(most_passengers_year) # 2019 
+  # 2019 
 
 # 4. Which months out of all the years had the most passengers?
 least_passengers_month <- passengers_report %>%
@@ -56,7 +51,7 @@ least_passengers_month <- passengers_report %>%
   filter(Total == max(passengers_report$Total, na.rm = TRUE)) %>% 
   pull(data_dte)
   
-View(least_passengers_month) # 1990-03
+  # 1990-03
 
 # 5.Which month had the lowest average number of passengers?
 lowest_avg_passenger <- passengers_report %>%
@@ -65,14 +60,6 @@ lowest_avg_passenger <- passengers_report %>%
   summarize(avg_passengers = mean(Total, na.rm = TRUE)) 
   
 lowest_avg_passenger <- filter(lowest_avg_passenger, avg_passengers == min(avg_passengers)) %>%
-  pull(data_dte) # 1991-02-01
-  
-View(lowest_avg_passenger)
-  
+  pull(data_dte) 
 
-
-
-
-
-
-
+  # 1991-02-01
