@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo=TRUE)
 
 <center> **INFO-201: Technical Foundations of Informatics - The Information School - University of Washington WINTER 2022** </center>
 
-## Proposal
+## Report
 <hr/>
 
 ### Abstract
@@ -80,6 +80,8 @@ Month with Least Passengers: ```r least_passengers_month```
 
 Day with Lowest Average Passengers: ```r lowest_avg_passenger```
 
+<br>
+For our five summary functions, we chose to answer questions that would be interesting and valuable to explore. Due to our dataset being a report on passengers and airlines, we calculated which airline would be the most popular one (the one that was most used in flights), and it came out to be Alaska Airlines. The second function calculates the percentage decline in passengers from 2019 to 2020 from the months January to March 1st. The percentage was -21.43%, which shows that COVID caused a 21% decline in passengers who traveled internationally from the US between January and March. We only used these three months as the report only contained this timeline for 2020 and we wanted to maintain accuracy when comparing between years. The third function investigates which year had the most passengers, and it was the year 2019. The calculation excluded 2020 because of the decline due to COVID. We also calculated the month with the most passengers for our fourth function, and it was March of 1990. For our fifth function, we looked at which month had the lowest average number of passengers, which was February 1991, which is more than 20 years in the past.
 
 ### Aggregate Table
 <hr/>
@@ -92,15 +94,30 @@ kable(Passengers_Report)
 
 ### Charts
 <hr/>
+#### The following charts are meant to help visualize parts of the dataset. 
 
-```{r, eval = TRUE, echo = FALSE}
+##### Visual 1
+```{r echo = FALSE}
 source("../source/chart1.R")
 chart1
+```
+<br>
+The amount of passengers is mapped out to show the changes throughout the year. This line graph contains 3 separate lines that correlate to the first 3 months of the year. By being able to visualize the data by month, the changes in passenger density because there are holidays and events within certain months. This separation also allows for the visualized graph to have clearer relationships, outlining the **sharp decline in passengers at March of 2020** as calculated from the second function. Besides the decrease that occurred in March, **the data prior had a general positive trend, the increase and decrease of passenger density of each month is generally relative to one another**.
+
+##### Visual 2
+```{r echo = FALSE}
 source("../source/chart2.R")
 chart2
-source("../source/chart3.R")
-chart3
 ```
+<br>
+This chart shows the changes in the total passengers by each carrier, each of the totals were calculated based on the year. This chart was made to help judge the range and consistency of each of the carriers, and whether or not there were large shifts between the years. Given that the number of carriers add up to over 500, the data set is set to take in the data of 10 different carriers to calculate the distributions in passengers. It can be seen that **some airlines contain outliers, while some are highly compact and close to the it’s average total passengers**. 
+
+##### Visual 3
+```{r echo = FALSE}
+source("../source/chart3.R")
+
+```
+
 
 Chart 3 shows the average number of passengers by year throughout the years (1990-2020). The histogram was made to help show the frequency in air travel by the year with the past decade and provide insight into relationships between major events and frequency of air travel. The visualizations in bars (the height) shows a drastic decrease in number of passengers in 2020 when the years before show an overall increasing trend. This reveals that there may have been a major event to have caused an abrupt drop in the average number of airline passengers.
 
