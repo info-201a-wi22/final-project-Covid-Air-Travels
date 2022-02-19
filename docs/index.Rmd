@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo=TRUE)
 
 <center> **INFO-201: Technical Foundations of Informatics - The Information School - University of Washington WINTER 2022** </center>
 
-## Proposal
+## Report
 <hr/>
 
 ### Abstract
@@ -80,6 +80,8 @@ Month with Least Passengers: ```r least_passengers_month```
 
 Day with Lowest Average Passengers: ```r lowest_avg_passenger```
 
+<br>
+For our five summary functions, we chose to answer questions that would be interesting and valuable to explore. Due to our dataset being a report on passengers and airlines, we calculated which airline would be the most popular one (the one that was most used in flights), and it came out to be Alaska Airlines. The second function calculates the percentage decline in passengers from 2019 to 2020 from the months January to March 1st. The percentage was -21.43%, which shows that COVID caused a 21% decline in passengers who traveled internationally from the US between January and March. We only used these three months as the report only contained this timeline for 2020 and we wanted to maintain accuracy when comparing between years. The third function investigates which year had the most passengers, and it was the year 2019. The calculation excluded 2020 because of the decline due to COVID. We also calculated the month with the most passengers for our fourth function, and it was March of 1990. For our fifth function, we looked at which month had the lowest average number of passengers, which was February 1991, which is more than 20 years in the past.
 
 ### Aggregate Table
 <hr/>
@@ -92,7 +94,7 @@ kable(Passengers_Report)
 
 ### Charts
 <hr/>
-#### The charts created are meant to help visualize the dataset. 
+#### The following charts are meant to help visualize parts of the dataset. 
 
 ##### Visual 1
 ```{r echo = FALSE}
