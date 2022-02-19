@@ -91,13 +91,13 @@ source("../source/chart3.R")
 
 
 ## References
-[^1]: Affan, M. (2022, January 30). _COVID-19 Daily data Updated._ https://www.kaggle.com/affanazhar/COVID19-daily-data-updated/version/6?select=COVID_19_data_version_6.csv
+[^1]: Affan, M. (2022, January 30). _COVID-19 Daily data Updated._ https://www.kaggle.com/affanazhar/covid19-daily-data-updated/version/6?select=covid_19_data_version_6.csv
 
-[^2]: Barnes, T. E. (2020, October 29). _Harvard Study: 'Low Risk' of COVID-19 Transmission When Flying._ US Travel Association. Retrieved February 4, 2022, from https://www.ustravel.org/news/harvard-study-low-risk-COVID-19-transmission-when-flying
+[^2]: Barnes, T. E. (2020, October 29). _Harvard Study: 'Low Risk' of COVID-19 Transmission When Flying._ US Travel Association. Retrieved February 4, 2022, from https://www.ustravel.org/news/harvard-study-low-risk-covid-19-transmission-when-flying
 
 [^3]: Department of Transportation Office of the Assistant Secretary for Aviation and International Affairs. (2022, January 7). _International_Report_Passengers_. data.transportation.gov. Retrieved February 4, 2022, from https://data.transportation.gov/Aviation/International_Report_Passengers/xgub-n9bw
 
-[^4]: Hotle, S., & Mumbower, S. (2020, December 9). _The impact of COVID-19 on domestic U.S. Air Travel Operations and commercial airport service._ Transportation Research Interdisciplinary Perspectives. Retrieved February 4, 2022, from https://www.sciencedirect.com/science/article/pii/S2590198220301883
+[^4]: Hotle, S., & Mumbower, S. (2020, December 9). _The impact of covid-19 on domestic U.S. Air Travel Operations and commercial airport service._ Transportation Research Interdisciplinary Perspectives. Retrieved February 4, 2022, from https://www.sciencedirect.com/science/article/pii/S2590198220301883
 
 [^5]: Mazareanu, E. (2021, October 5). _Net profit of airlines worldwide 2006-2022._ Statista. Retrieved February 4, 2022, from https://www.statista.com/statistics/232513/net-profit-of-commercial-airlines-worldwide/#:~:text=In%202020%2C%20the%20U.S.%20airline,only%20130.85%20billion%20U.S.%20dollars.
 
@@ -105,10 +105,10 @@ source("../source/chart3.R")
 
 [^7]: “Sources of Greenhouse Gas Emissions.” _EPA_, Environmental Protection Agency, 27 July 2021, https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions#transportation.
 
-[^8]: U.S. Bureau of Labor Statistics. (n.d.). _Unemployment rises in 2020, as the country battles the COVID-19 pandemic : Monthly Labor Review._ U.S. Bureau of Labor Statistics. Retrieved February 4, 2022, from https://www.bls.gov/opub/mlr/2021/article/unemployment-rises-in-2020-as-the-country-battles-the-COVID-19-pandemic.htm#:~:text=June%202021-,Unemployment%20rises%20in%202020%2C%20as%20the,battles%20the%20COVID%2D19%20pandemic&text=Total%20civilian%20employment%2C%20as%20measured,3.6%20percent%20to%2013.0%20percent.
+[^8]: U.S. Bureau of Labor Statistics. (n.d.). _Unemployment rises in 2020, as the country battles the COVID-19 pandemic : Monthly Labor Review._ U.S. Bureau of Labor Statistics. Retrieved February 4, 2022, from https://www.bls.gov/opub/mlr/2021/article/unemployment-rises-in-2020-as-the-country-battles-the-covid-19-pandemic.htm#:~:text=June%202021-,Unemployment%20rises%20in%202020%2C%20as%20the,battles%20the%20COVID%2D19%20pandemic&text=Total%20civilian%20employment%2C%20as%20measured,3.6%20percent%20to%2013.0%20percent.
 
 [^9]: U.S. International Air Passenger and Freight Statistics Report. U.S. Department of Transportation. (2022, January 7). Retrieved February 4, 2022, from https://www.transportation.gov/policy/aviation-policy/us-international-air-passenger-and-freight-statistics-report
 
-[^10]: _Washington Coronavirus Map and Case Count._ (2022, February). The New York Times. Retrieved February 4, 2022, from https://www.nytimes.com/interactive/2021/us/washington-COVID-cases.html
+[^10]: _Washington Coronavirus Map and Case Count._ (2022, February). The New York Times. Retrieved February 4, 2022, from https://www.nytimes.com/interactive/2021/us/washington-covid-cases.html
 
 [^11]: Whitley, A. (2021, December 22). _Is It Safe to Fly Right Now? Omicron May Double Infection Risk on Planes: IATA._ Bloomberg.com. Retrieved February 4, 2022, from https://www.bloomberg.com/news/articles/2021-12-22/omicron-at-least-doubles-risk-of-getting-infected-on-a-plane
