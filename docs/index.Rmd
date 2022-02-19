@@ -115,7 +115,7 @@ This chart shows the changes in the total passengers by each carrier, each of th
 ##### Visual 3
 ```{r echo = FALSE}
 source("../source/chart3.R")
-
+chart3
 ```
 <br>
 
