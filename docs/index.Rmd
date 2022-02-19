@@ -102,6 +102,8 @@ source("../source/chart3.R")
 chart3
 ```
 
+Chart 3 shows the average number of passengers by year throughout the years (1990-2020). The histogram was made to help show the frequency in air travel by the year with the past decade and provide insight into relationships between major events and frequency of air travel. The visualizations in bars (the height) shows a drastic decrease in number of passengers in 2020 when the years before show an overall increasing trend. This reveals that there may have been a major event to have caused an abrupt drop in the average number of airline passengers.
+
 
 ### References
 [^1]: Affan, M. (2022, January 30). _COVID-19 Daily data Updated._ https://www.kaggle.com/affanazhar/covid19-daily-data-updated/version/6?select=covid_19_data_version_6.csv
