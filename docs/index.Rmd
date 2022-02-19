@@ -91,6 +91,9 @@ source("../source/summary_table.R")
 library(knitr)
 kable(Passengers_Report)
 ```
+<br>
+
+This table was included to show the impact of Covid-19 on airline passengers. Since the 1990s, excluding January through March of 1991, 2002, and 2009, which had minor decrease in passengers count at about 10%, the first three months of every other years had a steady increase in passengers count from the previous year. However, in 2020, there was a greatest decrease at about 21%, which most likely was caused by the impact of global pandemic which shutdown most of airline operations. In terms of the ratio between the January to March passenger count of 2020 and the total passenger counts since 1990, the total percentage is average at about 4%, which shows that even though the airline industries has grown significantly since the past and more people are using airlines than ever, Covid-19 still had a big impact on the industry; this proves how impactful Covid-19 was and is to the whole world. 
 
 ### Charts
 <hr/>
