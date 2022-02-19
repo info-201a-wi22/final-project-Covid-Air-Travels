@@ -15,4 +15,3 @@ avg_passengers_year <- three_months %>%
 chart3 <- ggplot(data = avg_passengers_year, aes(x = Year, y = avg_passengers)) +
   geom_bar(stat = "identity", fill = "orange") +
   labs(y = "Average number of passengers", x = "Year")
-  
