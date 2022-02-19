@@ -70,6 +70,14 @@ Thanks to the people who took the time to collect the data that allowed us to do
 ```{r, include = FALSE}
 source("../source/summary.R")
 popular_airline
+
+percent_diff
+
+most_passengers_year
+
+least_passengers_month
+
+lowest_avg_passenger
 ```
 
 ### Aggregate Table
@@ -88,7 +96,9 @@ kable(Passengers_Report)
 source("../source/chart1.R")
 chart1
 source("../source/chart2.R")
+chart2
 source("../source/chart3.R")
+chart3
 ```
 
 
