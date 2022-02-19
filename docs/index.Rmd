@@ -66,19 +66,20 @@ Thanks to the people who took the time to collect the data that allowed us to do
 
 ### Summary Information
 <hr/>
-
 ```{r, include = FALSE}
 source("../source/summary.R")
-popular_airline
-
-percent_diff
-
-most_passengers_year
-
-least_passengers_month
-
-lowest_avg_passenger
 ```
+
+Airline with Most Flights (popular): ```r popular_airline``` = Alaska Airlines
+
+Percentage Difference in Passengers 2019-2020: ```r percent_diff```%
+
+Year with Most Passengers: ```r most_passengers_year```
+
+Month with Least Passengers: ```r least_passengers_month```
+
+Day with Lowest Average Passengers: ```r lowest_avg_passenger```
+
 
 ### Aggregate Table
 <hr/>
