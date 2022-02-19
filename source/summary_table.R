@@ -2,20 +2,13 @@
 library(dplyr)
 library(tidyverse)
 
-# Set Working Directory
-setwd("~/Documents/INFO_201/final-project-Covid_Airtravel-/source")
+passengers_report <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv")
 
-# Import Data 
-International_Report_Passengers <- read.csv(
-  "../Data/International_Report_Passengers.csv",
-  header = TRUE,
-  stringsAsFactors = FALSE
-)
 
 # International Report Passengers Dataframe Manipulation 
 
 # Calculate total passengers each year 
-Passengers_Report <- International_Report_Passengers %>% 
+Passengers_Report <- passengers_report %>% 
   filter(Month <= 3) %>% 
   group_by(Year) %>% 
   summarize(total_passengers = sum(Total)) 
@@ -33,8 +26,3 @@ Passengers_Report <- Passengers_Report %>%
   mutate(percent_increase = lag(Passengers_Report$percent_increase, default = NA)) %>% 
   select(-shift) %>% 
   rename(janurary_to_march_each_year = Year)
-
-View(Passengers_Report)
-
-
-
