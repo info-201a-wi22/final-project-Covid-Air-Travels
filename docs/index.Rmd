@@ -1,7 +1,7 @@
 ---
 title: "The Coronavirus’s Effect on Air Travels and the Implications"
 author: "By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), Garima Thapa (gt35@uw.edu), Linda Giang (linda71@uw.edu)"
-date: "2/23/2022"
+date: "2022-02-23"
 output: html_document
 ---
 
@@ -66,7 +66,7 @@ Thanks to the people who took the time to collect the data that allowed us to do
 
 ### Summary Information
 <hr/>
-```{r include = FALSE}
+```{r, include = FALSE}
 source("../source/summary.R")
 ```
 
@@ -86,7 +86,7 @@ For our five summary functions, we chose to answer questions that would be inter
 ### Aggregate Table
 <hr/>
 
-```{r eval = TRUE, echo = FALSE}
+```{r, eval = TRUE, echo = FALSE}
 source("../source/summary_table.R")
 library(knitr)
 kable(Passengers_Report)
