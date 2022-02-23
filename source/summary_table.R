@@ -1,6 +1,5 @@
 # Load packages
 library(dplyr)
-library(tidyverse)
 
 passengers_report <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv")
 
@@ -23,6 +22,7 @@ Passengers_Report <- Passengers_Report %>%
   mutate(percent_increase = round(((shift - total_passengers) / total_passengers) * 100, 2)) 
 
 Passengers_Report <- Passengers_Report %>% 
-  mutate(percent_increase = lag(Passengers_Report$percent_increase, default = NA)) %>% 
+  mutate(percent_increase = Passengers_Report$percent_increase - lag(Passengers_Report$percent_increase, default = NA)) %>% 
   select(-shift) %>% 
   rename(janurary_to_march_each_year = Year)
+
