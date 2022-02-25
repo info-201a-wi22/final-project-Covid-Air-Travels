@@ -1,7 +1,6 @@
 ---
 title: "The Coronavirus’s Effect on Air Travels and the Implications"
 author: "By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), Garima Thapa (gt35@uw.edu), Linda Giang (linda71@uw.edu)"
-date: "2/18/2022"
 output: html_document
 ---
 
