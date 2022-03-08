@@ -8,7 +8,7 @@ home_main_content <- mainPanel(
 )
 
 home_panel <- tabPanel(
-  "Home",
+  "Introduction",
   titlePanel("Covid Air Travels"),
   sidebarLayout(
     NULL,
@@ -16,24 +16,63 @@ home_panel <- tabPanel(
   )
 )
 
+
+
 chart1_main_content <- mainPanel(
   plotOutput("chart1")
 )
 
+chart1_sidebar_content <- sidebarPanel(
+  selectInput(
+    "vis1",
+    label = "Months",
+    choices = list(
+      "All",
+      "January", 
+      "February", 
+      "March"
+    )
+  )
+)
+
 chart1_panel <- tabPanel(
-  "chart1",
+  "Chart 1",
   titlePanel("Passenger by Month"),
   sidebarLayout(
-    NULL,
+    chart1_sidebar_content,
     chart1_main_content
+  )
+)
+
+chart2_main_content <- mainPanel(
+  plotOutput("chart2")
+)
+
+chart2_sidebar_content <- sidebarPanel(
+  selectInput(
+    "vis2",
+    label = "Carriers",
+    choices = list(
+      
+    )
+  )
+)
+
+chart2_panel <- tabPanel(
+  "Chart 2",
+  titlePanel("Passenger by Carrier"),
+  sidebarLayout(
+    chart2_sidebar_content,
+    chart2_main_content
   )
 )
 
 
 
 ui <- navbarPage(
-  "Air Data",
+  "Info 201",
   home_panel,
   
-  chart1_panel
+  chart1_panel, 
+  chart2_panel
 )
