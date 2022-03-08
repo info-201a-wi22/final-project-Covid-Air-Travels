@@ -4,35 +4,9 @@ library(stringr)
 
 source("../source/summary.R")
 source("../source/summary_table.R")
+source("../source/chart1.R")
 source("../source/chart2.R")
 source("../source/chart3.R")
-
-
-# Chart 1 stuff
-passengers_report <- read.csv(
-  "https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv")
-
-options(dplyr.summarise.inform = FALSE)
-
-jan_total <- passengers_report %>%
-  select(Year, Month, Total) %>%
-  filter(Month == 1) %>%
-  group_by(Year, Month) %>%
-  summarise(Total = mean(Total))
-
-feb_total <- passengers_report %>%
-  select(Year, Month, Total) %>%
-  filter(Month == 2) %>%
-  group_by(Year, Month) %>%
-  summarise(Total = mean(Total))
-
-mar_total <- passengers_report %>%
-  select(Year, Month, Total) %>%
-  filter(Month == 3) %>%
-  group_by(Year, Month) %>% 
-  summarise(Total = mean(Total))
-# end of Chart 1 stuff
-
 
 
 server <- function(input, output) { 
