@@ -10,6 +10,15 @@ source("../source/chart3.R")
 
 
 server <- function(input, output) { 
+  output$imgTix <- renderImage({
+    filename <- normalizePath(file.path('../img/plane.jpg'))
+    
+    list(src = filename, 
+         width = 500,
+         alt = "airplane")
+    
+  }, deleteFile = FALSE)
+  
   output$report <- renderText({
     abstract <- "Our main question is how COVID has affected air travel and how 
     this impacts the lives of the people that travel. This question is 

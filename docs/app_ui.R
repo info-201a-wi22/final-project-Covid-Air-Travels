@@ -3,6 +3,11 @@ library(ggplot2)
 library(plotly) 
 
 home_main_content <- mainPanel(
+  imageOutput("imgTix"),
+  img("side plane", 
+      src="https://flyingmag.sfo3.digitaloceanspaces.com/flyingma/wp-content/uploads/2021/08/27203109/httpswww.flyingmag.comsitesflyingmag.comfilesimport2013sitesallfiles_images201309flw0913_gulfstream_02.jpg"),
+  br(),
+  
   textOutput("report"), 
   br(),
 )
