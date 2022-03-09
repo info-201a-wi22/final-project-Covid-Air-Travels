@@ -5,10 +5,9 @@ account: lattematics
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5808651
-bundleId: 5658026
+bundleId: 5660212
 url: https://lattematics.shinyapps.io/docs/
-when: 1646770937.31943
-lastSyncTime: 1646770937.31947
+when: 1646814241.88726
+lastSyncTime: 1646814241.88727
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: _config.yml|index.html|index.md|index.Rmd|p01-proposal.md|README.md
