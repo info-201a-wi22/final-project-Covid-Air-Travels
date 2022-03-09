@@ -109,7 +109,7 @@ conclusion_panel <- tabPanel(
   To analyze and scrutinize the impact Covid-19 had on air travel, our group posed significant questions that interpret a global phenomenon of declining air travel.
     The first question we tackled was the most popular airline industry with the most flights. To see the true impact of Covid-19 on air travel, 
   it was appropriate to gather large amounts of data that proposes a correlation between various variables. Therefore, examining the impact of the most 
-  popular airline would provide enough information for our analysis. The most popular international airline was Alaska Airlines. 
+  popular airline would provide enough information for our analysis. The most popular international airline was American Airlines. 
 	  The second question was the overall difference between traveling passengers from 2019 to 2020. In March of 2020, Covid-19 became prevalent, 
 	causing various impacts on global economical sectors. Because the dataset only consisted of January to March data in 2020, the percentage decrease
 	in passengers from the first three months of 2019 and 2020 was found. The decrease was about 21.4%, a significant change from the previous year.
@@ -129,8 +129,8 @@ conclusion_panel <- tabPanel(
   and international travel when it began in 2019. Our data only goes up till 
   March 2020, so we opted to only use three months worth of data each year in 
   our analysis and calculations for accurate findings.
-    The airline with the most flights was Alaska Airlines, which shows that 
-  Alaska Airlines is not only popular in domestic flights, but in international 
+    The airline with the most flights was American Airlines, which shows that 
+  American Airlines is not only popular in domestic flights, but in international 
   flights as well. In our second visual, we break down the distribution of total 
   passengers in 10 airlines and scale it by log. This visual reads into a sample 
   set of airlines and can imply that the number of passengers are generally 
@@ -155,6 +155,19 @@ conclusion_panel <- tabPanel(
   most passengers."),
   
   h1("Conclusion"),
+  p("Overall, we found that the Covid-19 pandemic has caused the air 
+  transportation sector to a major decline in traffic in 2020 and left a toll
+  on many airline carriers. With the spread of the life-threatening virus, 
+  we see the major negative impacts in both American and non-American flight 
+  carrier, despite how the trend from previous years anticipated an increase
+  in the years coming.
+  
+  Together with curiosity and the eagerness to learn, were able to compile 
+  data and perform analyses to answer our questions at the start of this project.
+  Our data visualizations helped us understand and navigate data easily so that we
+  can see information in appropriate perspectives for different factors. We are 
+  thrilled to share with you our findings and creations, and hope you they are 
+  helpful to you!")
 )
 
 ui <- navbarPage(

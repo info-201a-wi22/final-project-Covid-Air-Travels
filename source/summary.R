@@ -12,7 +12,7 @@ popular_airline <- passengers_report %>%
   filter(row_number() == 1) %>%
   pull(carrier)
   
-  #'AA' = Alaska Airlines
+  #'AA' = American Airlines
 
 # 2. What was the difference in percentage between the total number of 
 # passengers in the years before and after COVID hit (2019-2020)?
