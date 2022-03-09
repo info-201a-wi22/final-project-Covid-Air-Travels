@@ -138,7 +138,7 @@ server <- function(input, output) {
         ggtitle("Average number of China Southern Airlines' passengers by year")
     }
 
-    return(ggplotly(p))
+    return(p)
 
   })
 }
