@@ -184,7 +184,13 @@ chart1_panel <- tabPanel(
   sidebarLayout(
     chart1_sidebar_content,
     chart1_main_content
-  )
+  ),
+  p("In chart 1, the amount of passengers is mapped out to show the changes throughout the year. 
+    This line graph contains 3 separate lines that correlate to the first 3 months of the year. 
+    By being able to visualize the data by month, the changes in passenger density because there are holidays and events within certain months. 
+    This separation also allows for the visualized graph to have clearer relationships, outlining the sharp decline in passengers at March of 2020 as calculated from the second function. 
+    Besides the decrease that occurred in March, the data prior had a general positive trend, 
+    the increase and decrease of passenger density of each month is generally relative to one another.")
 )
 
 pass_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv", 
@@ -227,7 +233,11 @@ chart2_panel <- tabPanel(
   sidebarLayout(
     chart2_sidebar_content,
     chart2_main_content
-  )
+  ),
+  p("Chart 2 shows the changes in the total passengers by each carrier, each of the totals were calculated based on the year. 
+    This chart was made to help judge the range and consistency of each of the carriers, and whether or not there were large shifts between the years. 
+    Given that the number of carriers add up to over 500, the data set is set to take in the data of 10 different carriers to calculate the distributions in passengers. 
+    It can be seen that some airlines contain outliers, while some are highly compact and close to the it’s average total passengers.")
 )
 
 chart3_main_content <- mainPanel(
