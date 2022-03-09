@@ -1,6 +1,5 @@
 # Load packages
 library(dplyr)
-library(tidyverse)
 
 passengers_report <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv")
 
