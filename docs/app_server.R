@@ -77,5 +77,41 @@ server <- function(input, output) {
     #only one year, one month, one day, or all the data inside of the data set?"
     
   })
+  
+  output$chart3 <- renderPlot({
+    if(input$vis3 == "All carriers"){
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = all)) +
+        geom_bar(stat = "identity", fill = "olivedrab3") +
+        labs(y = "Average number of passengers", x = "Year") +
+        ggtitle("Average number of flight passengers by year")
+    } else if(input$vis3 == "American Airlines"){
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = aa)) +
+        geom_bar(stat = "identity", fill = "firebrick3") +
+        labs(y = "Average number of passengers", x = "Year") +
+        ggtitle("Average number of American Airlines' passengers by year")
+    } else if(input$vis3 == "Delta Airlines") {
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = dl)) +
+        geom_bar(stat = "identity", fill = "dodgerblue2") +
+        labs(y = "Average number of passengers", x = "Year") +
+        ggtitle("Average number of Delta Airlines' passengers by year")
+    } else if(input$vis3 == "Southwest Airlines") {
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = wn)) +
+        geom_bar(stat = "identity", fill = "darkgoldenrod1") +
+        labs(y = "Average number of passengers", x = "Year") +
+        ggtitle("Average number of Southwest Airlines' passengers by year")
+    } else if(input$vis3 == "United Airlines") {
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = ua)) +
+        geom_bar(stat = "identity", fill = "purple4") +
+        labs(y = "Average number of passengers", x = "Year") +
+        ggtitle("Average number of United Airlines' passengers by year")
+    } else {
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = cz)) +
+        geom_bar(stat = "identity", fill = "deepskyblue3") +
+        labs(y = "Average number of passengers", x = "Year") +
+        ggtitle("Average number of China Southern Airlines' passengers by year")
+    }
+    return(p)
+
+  })
 }
 
