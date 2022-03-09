@@ -105,7 +105,7 @@ server <- function(input, output) {
   })
   # end of Chart 2
   
-  output$chart3 <- renderPlot({
+  output$chart3 <- renderPlotly({
     if(input$vis3 == "All carriers"){
       p <- ggplot(data = avg_passengers, aes(x = Year, y = All_Passengers)) +
         geom_bar(stat = "identity", fill = "olivedrab3") +
