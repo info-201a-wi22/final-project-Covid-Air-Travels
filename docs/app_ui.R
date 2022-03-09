@@ -231,7 +231,7 @@ chart2_panel <- tabPanel(
 )
 
 chart3_main_content <- mainPanel(
-   #plotOutput("chart3")
+   plotOutput("chart3")
 )
 
 chart3_sidebar_content <- sidebarPanel(

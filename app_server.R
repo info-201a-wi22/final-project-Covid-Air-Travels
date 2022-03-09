@@ -2,8 +2,8 @@ library(dplyr)
 library(plotly)
 library(stringr)
 
-source("../source/chart1.R")
-source("../source/chart3.R")
+source("source/chart1.R")
+source("source/chart3.R")
 
 pass_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv", 
                               stringsAsFactors = FALSE)
@@ -22,22 +22,13 @@ most_pass <- pass_data %>%
 
 server <- function(input, output) { 
   output$imgTix <- renderImage({
-    filename <- normalizePath(file.path('../img/plane.jpg'))
+    filename <- normalizePath(file.path('img/plane.jpg'))
     
     list(src = filename, 
          width = 500,
          alt = "airplane")
     
   }, deleteFile = FALSE)
-  
-  output$report <- renderText({
-    abstract <- "Our main question is how COVID has affected air travel and how 
-    this impacts the lives of the people that travel. This question is 
-    important because COVID has caused many losses for airlines with many 
-    people opting for other options to connect with others. To help answer this 
-    question, we will find details on the changes in passengers that the 
-    airlines receive."
-  })
   
   # Chart 1
   output$chart1 <- renderPlot({
