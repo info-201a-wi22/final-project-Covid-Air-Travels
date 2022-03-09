@@ -10,27 +10,32 @@ three_months <- passengers_report %>%
 aa_avg <- three_months %>%
   filter(carrier == "AA") %>%
   group_by(Year) %>%
-  summarize(aa = mean(Total, na.rm = TRUE)) %>%
-  select(Year, aa)
+  summarize(AmericanAir_Passengers = mean(Total, na.rm = TRUE)) %>%
+  select(Year, AmericanAir_Passengers)
 dl_avg <- three_months %>%
   filter(carrier == "DL") %>%
   group_by(Year) %>%
-  summarize(dl = mean(Total, na.rm = TRUE)) %>%
-  select(Year, dl)
+  summarize(Delta_Passengers = mean(Total, na.rm = TRUE)) %>%
+  select(Year, Delta_Passengers)
 wn_avg <- three_months %>%
   filter(carrier == "WN") %>%
   group_by(Year) %>%
-  summarize(wn = mean(Total, na.rm = TRUE)) %>%
-  select(Year, wn)
+  summarize(Southwest_Passengers = mean(Total, na.rm = TRUE)) %>%
+  select(Year, Southwest_Passengers)
 ua_avg <- three_months %>%
   filter(carrier == "UA") %>%
   group_by(Year) %>%
-  summarize(ua = mean(Total, na.rm = TRUE)) %>%
-  select(Year, ua)
+  summarize(United_Passengers = mean(Total, na.rm = TRUE)) %>%
+  select(Year, United_Passengers) 
+cz_avg <- three_months %>%
+  filter(carrier == "CZ") %>%
+  group_by(Year) %>%
+  summarize(ChinaSouthern_Passengers = mean(Total, na.rm = TRUE)) %>%
+  select(Year, ChinaSouthern_Passengers)
 all_avg <- three_months %>%
   group_by(Year) %>%
-  summarize(all = mean(Total, na.rm = TRUE)) %>%
-  select(Year, all)
+  summarize(All_Passengers = mean(Total, na.rm = TRUE)) %>%
+  select(Year, All_Passengers)
 
 avg_passengers <- inner_join(aa_avg, dl_avg, by = "Year") %>% inner_join(wn_avg, by = "Year") %>%
   inner_join(ua_avg, by = "Year") %>% inner_join(cz_avg, by = "Year") %>% inner_join(all_avg, by = "Year")

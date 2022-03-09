@@ -80,38 +80,37 @@ server <- function(input, output) {
   
   output$chart3 <- renderPlot({
     if(input$vis3 == "All carriers"){
-      p <- ggplot(data = avg_passengers, aes(x = Year, y = all)) +
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = All_Passengers)) +
         geom_bar(stat = "identity", fill = "olivedrab3") +
         labs(y = "Average number of passengers", x = "Year") +
         ggtitle("Average number of flight passengers by year")
     } else if(input$vis3 == "American Airlines"){
-      p <- ggplot(data = avg_passengers, aes(x = Year, y = aa)) +
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = AmericanAir_Passengers)) +
         geom_bar(stat = "identity", fill = "firebrick3") +
         labs(y = "Average number of passengers", x = "Year") +
         ggtitle("Average number of American Airlines' passengers by year")
     } else if(input$vis3 == "Delta Airlines") {
-      p <- ggplot(data = avg_passengers, aes(x = Year, y = dl)) +
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = Delta_Passengers)) +
         geom_bar(stat = "identity", fill = "dodgerblue2") +
         labs(y = "Average number of passengers", x = "Year") +
         ggtitle("Average number of Delta Airlines' passengers by year")
     } else if(input$vis3 == "Southwest Airlines") {
-      p <- ggplot(data = avg_passengers, aes(x = Year, y = wn)) +
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = Southwest_Passengers)) +
         geom_bar(stat = "identity", fill = "darkgoldenrod1") +
         labs(y = "Average number of passengers", x = "Year") +
         ggtitle("Average number of Southwest Airlines' passengers by year")
     } else if(input$vis3 == "United Airlines") {
-      p <- ggplot(data = avg_passengers, aes(x = Year, y = ua)) +
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = United_Passengers)) +
         geom_bar(stat = "identity", fill = "purple4") +
         labs(y = "Average number of passengers", x = "Year") +
         ggtitle("Average number of United Airlines' passengers by year")
     } else {
-      p <- ggplot(data = avg_passengers, aes(x = Year, y = cz)) +
+      p <- ggplot(data = avg_passengers, aes(x = Year, y = ChinaSouthern_Passengers)) +
         geom_bar(stat = "identity", fill = "deepskyblue3") +
         labs(y = "Average number of passengers", x = "Year") +
         ggtitle("Average number of China Southern Airlines' passengers by year")
     }
-    return(p)
-
+    return(ggplotly(p))
   })
 }
 

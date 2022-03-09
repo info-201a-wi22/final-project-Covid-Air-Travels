@@ -98,7 +98,16 @@ chart3_panel <- tabPanel(
   sidebarLayout(
     chart3_sidebar_content,
     chart3_main_content
-  )
+  ),
+  p("Chart 3 shows the average number of passengers from 2015 to 2020 with the 
+    option to view the data of a particular airline to provide perspective from 
+    popular airlines. The histogram was made to help show the frequency in air 
+    travel by the year to provide insight into relationships between major events 
+    and frequency of air travel. The visualizations in bars (the height) shows 
+    a drastic decrease in number of passengers in 2020 when 
+    the years before show an overall increasing trend in all airline options. 
+    This reveals that there may have been a major event to have caused an abrupt 
+    drop in the average number of airline passengers.")
 )
 
 conclusion_panel <- tabPanel(
