@@ -10,15 +10,15 @@ date_filter <- passengers_report %>%
 
 time_range <- range(date_filter$Year)
 
-most_pass <- pass_data %>%
-  select(carrier, Total, Year, Month) %>%
-  filter(Year >= 2010) %>%
-  group_by(carrier) %>%
-  summarise(Total = sum(Total))
-
-
-
 server <- function(input, output) { 
+  output$wing <- renderImage({
+    filename <- normalizePath(file.path('img/wing.png'))
+    
+    list(src = filename, 
+         alt = "airplane wing")
+    
+  }, deleteFile = FALSE)
+  
   output$chart1 <- renderPlotly({
     if(input$vis1 == "All"){
       p <- ggplot(data = NULL, 
@@ -67,15 +67,17 @@ server <- function(input, output) {
         filter(grepl(search, carrier))
       
       p <- plot_ly(x = data[, xvar], y = data[, yvar], 
+                   type = "scatter",
                    mode = "markers", 
                    marker = list(
                      opacity = .5, 
                      size = 10, 
                      color = "Month"
                    )) %>% 
-        layout(xaxis = list(range = c(xmin, xmax), title = xvar), 
+        layout(title = paste0("Passenger Distributions for ", input$search), 
+               xaxis = list(range = c(xmin, xmax), title = xvar), 
                yaxis = list(range = c(0, ymax), 
-                            title = paste0("Totals for ", input$search))
+                            title = paste0("Total Passengers")) 
         )
       return(p)
     }
@@ -120,5 +122,13 @@ server <- function(input, output) {
     return(p)
     
   })
+  
+  output$side <- renderImage({
+    filename <- normalizePath(file.path('img/side.png'))
+    
+    list(src = filename, 
+         alt = "airplane side")
+    
+  }, deleteFile = FALSE)
 }
 

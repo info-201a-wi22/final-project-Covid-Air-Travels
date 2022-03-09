@@ -1,17 +1,14 @@
 library(shiny)
 library(plotly) 
 
-fluidPage(
-  setBackgroundColor(
-    color = "blue")
-)
+source("app_server.R")
 
 home_panel <- tabPanel(
   "Introduction",
   titlePanel(h2("The Coronavirus’s Effect on Air Travels")),
-  h4("Author: By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), 
+  h3("Author: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), 
      Garima Thapa (gt35@uw.edu), Linda Giang (linda71@uw.edu)"),
-  h4(strong("INFO-201: Technical Foundations of Informatics - 
+  h3(strong("INFO-201: Technical Foundations of Informatics - 
         The Information School - University of Washington WINTER 2022")),
   h4(strong("Abstract")),
   p("Our main question is how air travel has changed over the years and how 
@@ -137,22 +134,27 @@ home_panel <- tabPanel(
     There are influences of code-share agreements on this data, and this 
     agreement makes it common for passengers to fly on an aircraft operated 
     by an airline different from the one they bought their ticket from."),
-  img(src="https://flyingmag.sfo3.digitaloceanspaces.com/flyingma/wp-content/uploads/2021/08/27203109/httpswww.flyingmag.comsitesflyingmag.comfilesimport2013sitesallfiles_images201309flw0913_gulfstream_02.jpg"), 
-
-  tags$style("tabPanel {background-color: #EEF7FE;}
+  imageOutput("wing"),
+  tags$style("html, body {
+                margin: 0px;
+                padding: 0px;
+                background-color: #EBE4FF;}
   
              h2 {font-family: Optima;
                text-align: center;
                font-weight: bold;
                font-color: #7F66C7}
-             h4 {border-style: solid;
+            h3 {font-family: Optima;
+               font-color: #60069B}
+             h4 {border: 1px solid Gray;
+               background-color: white;
+               opacity: 0.7;
                padding: 10px 10px 10px 10px; 
                text-align: center;
                font-family: Avantgarde;}
              p {width: 100%;
                padding: 10px 10px 10px 10px}
-             img {background-repeat: no-repeat;
-                  background-size: auto;
+             img {size: 70%;
                   margin: 0px 0px 0px 0px;}"),
 )
 
@@ -195,8 +197,6 @@ chart1_panel <- tabPanel(
     relative to one another.")
 )
 
-source("app_server.R")
-
 chart2_main_content <- mainPanel(
   plotlyOutput("chart2")
 )
@@ -236,8 +236,8 @@ chart2_panel <- tabPanel(
     This chart was made to help judge the range and consistency of each of the 
     carriers, and whether or not there were large shifts between the years. 
     Given that the number of carriers add up to over 500, the data set is set to
-    take in the data of 10 different carriers to calculate the distributions in 
-    passengers. 
+    take in the data of the top 10 most used carriers as of 2010 to calculate 
+    the distributions in passengers. 
     It can be seen that some airlines contain outliers, while some are highly 
     compact and close to the it’s average total passengers.")
 )
@@ -282,7 +282,8 @@ chart3_panel <- tabPanel(
 conclusion_panel <- tabPanel(
   "Conclusion",
   h2("Summary of Findings"),
-  p("Covid-19 Impacted many lives and changed the dynamics of global interpretation of standards. 
+  p("Covid-19 Impacted many lives and changed the dynamics of global 
+  interpretation of standards. 
   Causing monetary damage to many industries, the airline industry was also targeted due to its nature of traveling in confined spaces. 
   To analyze and scrutinize the impact Covid-19 had on air travel, our group posed significant questions that interpret a global phenomenon of declining air travel.
     The first question we tackled was the most popular airline industry with the most flights. To see the true impact of Covid-19 on air travel, 
@@ -345,7 +346,9 @@ conclusion_panel <- tabPanel(
   Our data visualizations helped us understand and navigate data easily so that we
   can see information in appropriate perspectives for different factors. We are 
   thrilled to share with you our findings and creations, and hope you they are 
-  helpful to you!")
+  helpful to you!"), 
+
+  imageOutput("side")
 )
 
 ui <- navbarPage(
@@ -354,7 +357,7 @@ ui <- navbarPage(
     ".navbar-nav li a {
         font-size: 20px;
         font-weight: bold;
-        background-color: #EBE4FF;
+        background-color: #FAF2FF;
       }
     "),
   home_panel,
