@@ -5,9 +5,7 @@ library(stringr)
 source("source/chart1.R")
 source("source/chart3.R")
 
-pass_data <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-Covid-Air-Travels/main/data/International_Report_Passengers.csv", 
-                              stringsAsFactors = FALSE)
-date_filter <- pass_data %>%
+date_filter <- passengers_report %>%
   filter(Month > 0 & Month < 4 & Year > 2009)
 
 time_range <- range(date_filter$Year)
@@ -21,17 +19,7 @@ most_pass <- pass_data %>%
 
 
 server <- function(input, output) { 
-  output$imgTix <- renderImage({
-    filename <- normalizePath(file.path('img/plane.jpg'))
-    
-    list(src = filename, 
-         width = 500,
-         alt = "airplane")
-    
-  }, deleteFile = FALSE)
-  
-  # Chart 1
-  output$chart1 <- renderPlot({
+  output$chart1 <- renderPlotly({
     if(input$vis1 == "All"){
       p <- ggplot(data = NULL, 
                   aes(x = Year, y = Total,color = factor(Month))) +
@@ -63,15 +51,15 @@ server <- function(input, output) {
     
     return(p)
   })
-  # end of Chart 1
+
   
-  # Chart 2
   output$chart2 <- renderPlotly({
     temp <- date_filter %>%
       filter(Year >= input$time_range[1], Year <= input$time_range[2])
     
     avg_plot <- function(temp,  search = "", 
                          xvar = "Year", yvar = "Total") {
+      xmin <- min(temp[,xvar]) - 1
       xmax <- max(temp[,xvar]) + 1
       ymax <- max(temp[,yvar]) 
       
@@ -85,7 +73,7 @@ server <- function(input, output) {
                      size = 10, 
                      color = "Month"
                    )) %>% 
-        layout(xaxis = list(range = c(2009.5, xmax), title = xvar), 
+        layout(xaxis = list(range = c(xmin, xmax), title = xvar), 
                yaxis = list(range = c(0, ymax), 
                             title = paste0("Totals for ", input$search))
         )
@@ -94,9 +82,9 @@ server <- function(input, output) {
     
     return(avg_plot(temp, input$search))
   })
-  # end of Chart 2
+
   
-  output$chart3 <- renderPlot({
+  output$chart3 <- renderPlotly({
     if(input$vis3 == "All carriers"){
       p <- ggplot(data = avg_passengers, aes(x = Year, y = All_Passengers)) +
         geom_bar(stat = "identity", fill = "olivedrab3") +
@@ -129,7 +117,7 @@ server <- function(input, output) {
         ggtitle("Average number of China Southern Airlines' passengers by year")
     }
     
-    return(ggplotly(p))
+    return(p)
     
   })
 }

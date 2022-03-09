@@ -5,9 +5,9 @@ account: lattematics
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5812850
-bundleId: 5660374
+bundleId: 5662503
 url: https://lattematics.shinyapps.io/final-project-Covid-Air-Travels/
-when: 1646816493.31963
-lastSyncTime: 1646816493.31968
+when: 1646845945.77479
+lastSyncTime: 1646845945.77484
 asMultiple: FALSE
 asStatic: FALSE
