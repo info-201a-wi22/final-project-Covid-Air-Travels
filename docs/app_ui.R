@@ -22,17 +22,17 @@ home_panel <- tabPanel(
 )
 
 report_main_content <- mainPanel(
-  h3("Author: By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), 
+  h4("Author: By: Monica Dao (xmtdx@uw.edu), John Oh (jho12@uw.edu), 
      Garima Thapa (gt35@uw.edu), Linda Giang (linda71@uw.edu)"),
-  h4(em("INFO-201: Technical Foundations of Informatics - 
+  h4(strong("INFO-201: Technical Foundations of Informatics - 
         The Information School - University of Washington WINTER 2022")),
-  h4(em("Abstract")),
+  h4(strong("Abstract")),
   p("Our main question is how air travel has changed over the years and how 
     covid has impacted the lives of the people that travel. This question is 
     important because covid has caused many losses for airlines and changed the 
     way people interact with one another. To help answer this question, we will 
     find details on the changes in passengers that the airlines receive."),
-  h4(em("Introduction")),
+  h4(strong("Introduction")),
   p("The coronavirus that has rapidly spread since early 2020 caused many to be 
     apprehensive towards crowds of people. Airplanes are examples of this, 
     being an enclosed space that seats many people for an average of 3 hours. 
@@ -49,7 +49,7 @@ report_main_content <- mainPanel(
     trends of passengers may inversely follow the number of cases, but with the 
     effectiveness of the vaccines and the addition of the booster, this may not 
     have to be the case."), 
-  h4(em("Design Situation")), 
+  h4(strong("Design Situation")), 
   h5("Framing the topic of concern"), 
   p("Air travel is one of the most prevalent ways of traveling, and it has 
     impacted the way people plan long-term and short-term travel in the United 
@@ -88,7 +88,7 @@ report_main_content <- mainPanel(
     needed. This could create confusion amongst decision-makers in the airline 
     industry regarding air travel operations, which may contradict policy 
     makers’ decisions."),
-  h4(em("Research questions")),
+  h4(strong("Research questions")),
   p("- How has passenger density changed in the various airlines? 
     Has covid added to this change?"),
   p("- Are the shifts in passenger density applicable across the airlines?"),
@@ -106,7 +106,7 @@ report_main_content <- mainPanel(
     greenhouse gas produced. In 2019, it was seen that 29% of carbon pollution 
     came from the transportation sector (Sources of Greenhouse Gas Emissions, 
     2021)."),
-  h4(em("The Dataset")), 
+  h4(strong("The Dataset")), 
   p("The dataset is U.S. International Air Traffic data(1990-2020) from Kaggle 
     on airport and airline traffic by US and international carriers. The data, 
     held in the U.S. Department of Transportation website, is from the U.S. 
@@ -148,8 +148,7 @@ report_main_content <- mainPanel(
     the data can seem to show that no U.S. carrier serves an international 
     point, the carrier traffic is first moving through a connecting city. 
     There are influences of code-share agreements on this data, and this 
-    agreement makes it common for passengers to fly on an aircraft operated 
-    by an airline different from the one they bought their ticket from."),
+    agreement makes it common for passengers to fly on an aircraft operated by an airline different from the one they bought their ticket from."),
 )
   
 
